@@ -10,7 +10,7 @@ import (
 // Concept เดียวกับ Thread safe ใน Java
 type SafeCounter struct {
 	v   map[string]int
-	mux sync.Mutex
+	mux sync.Mutex // สร้างตัวแปร Mutex สำหรับจัดการเรื่อง Thread safe
 }
 
 func (c *SafeCounter) Increase(key string) {
